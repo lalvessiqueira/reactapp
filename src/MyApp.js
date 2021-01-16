@@ -11,7 +11,7 @@ function MyApp() {
       const updated = characters.filter((character, i) => {
          return i !== index
       });
-      //const updated = await axios.delete('http://localhost:5000/users', person.data);
+      const response = axios.delete('http://localhost:5000/users/'+ characters[index].id);
       setCharacters(updated);
    }
 
